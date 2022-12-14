@@ -74,8 +74,6 @@ $results = $users->index();
         </div>
         <?php } ?>
 
-
-
     </div>
 
     <!-- <div class="row" style="margin-top: 30px;">
