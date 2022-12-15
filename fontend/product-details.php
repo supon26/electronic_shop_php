@@ -39,9 +39,8 @@ $result = $user->show($id);
                 <hr class="me-5">
             </div>
             <div class="d-flex justify-content-end align-items-center me-3 mb-5 ">
-                <a href="view-card.php?id=<?php echo $result['id']?>" class="btn btn-outline-success shadow-none">Buy
-                    Now</a>
-                <a href="confirm-oder.php" class="btn btn-primary shadow-none">Add to Card</a>
+                <a href="view-card.php?id=<?php echo $result['id']?>" class="btn btn-outline-success shadow-none">Add to Card</a>
+                <a href="confirm-oder.php" class="btn btn-primary shadow-none">Buy Now</a>
             </div>
         </div>
 

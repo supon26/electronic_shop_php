@@ -54,15 +54,11 @@
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown"
                             style="background-color: rgb(67 0 86);">
-                            <li><a class="dropdown-item" href="#">Samrt Phone</a></li>
                             <li><a class="dropdown-item" href="#">Mobile Phone</a></li>
-                            <li><a class="dropdown-item" href="#">Cameras</a></li>
-                            <li><a class="dropdown-item" href="#">Fridge</a></li>
-                            <li><a class="dropdown-item" href="#">AC</a></li>
-                            <li><a class="dropdown-item" href="#">Samrt Watch</a></li>
                             <li><a class="dropdown-item" href="#">Headphone</a></li>
-                            <li><a class="dropdown-item" href="#">Laptop</a></li>
-                            <li><a class="dropdown-item" href="#">PC Moniter</a></li>
+                            <li><a class="dropdown-item" href="#">Watch</a></li>
+                            <li><a class="dropdown-item" href="#">Personal Computer</a></li>
+                            <li><a class="dropdown-item" href="#">Television</a></li>
                         </ul>
                     </li>
                     <li class="nav-item">

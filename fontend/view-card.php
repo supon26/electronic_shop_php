@@ -17,9 +17,9 @@ $result = $user->show($id);
     <div class="row">
         <div class="col-7 border-end bg-light">
             <div class="d-flex justify-content-between ps-3 pe-3 shadow-lg bg-light mb-5">
-                <p class="pt-3"><i class="fa-sharp fa-solid fa-cart-shopping"></i> Select All (2 Items)</p>
+                <p class="pt-3"><i class="fa-sharp fa-solid fa-cart-shopping"></i> Select All (1 Items)</p>
                 <p class="pt-3">Your Total: <b>1000Tk</b></p>
-                <p>
+                <p class="pt-3">
                     <?php echo $result['name']?>
                 </p>
             </div>
@@ -64,7 +64,7 @@ $result = $user->show($id);
                         </a>
                     </div>
                     <div>
-                        <a href="./index.php">
+                        <a href="confirm-oder.php">
                             <button class="btn btn-primary">Place Order</button>
                         </a>
                     </div>
