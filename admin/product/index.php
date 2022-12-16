@@ -29,10 +29,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     </div>
     <?php session_destroy();  ?>
     <?php } ?>
-
-    <div class="col-12 py-3 mb-5 table-responsive">
+    <div class="container border-top">
+    <h2 class="py-2 text-center bg-primary text-white">Product Information</h2>
+    <div class="col-12 table-responsive">
         <div>
-            <a href="create.php" class="btn btn-success my-3">Create</a>
+            <a href="create.php" class="btn btn-success">Create</a>
         </div>
         <hr>
         <table class="table table-striped mb-5 table-hover table-bordered table-sm text-center">
@@ -77,11 +78,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 </td>
                 <td>
                     <img src="<?php echo '../../public/assets/upload/'.$data['photo'] ?>" width="70" height="60" alt=''>
-                    <?php 
-                    // echo $_SERVER['DOCUMENT_ROOT'].'/Projects/electronic_shop_php/public/assets/upload/'.$data['photo'];
-                    // die();
-                    
-                    ?>
                 </td>
                 <td>
                     <?php echo $data['created_at']?>

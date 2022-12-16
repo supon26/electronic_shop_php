@@ -30,9 +30,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <?php session_destroy();  ?>
     <?php } ?>
 
-    <div class="col-12 py-3 table-responsive mb-5 fixed">
+    <div class="container border border-3">
+    <h2 class="py-2 text-center bg-primary text-white">Category Information</h2>
+    <div class="col-12  table-responsive fixed">
         <div>
-            <a href="create.php" class="btn btn-success my-3">Create</a>
+            <a href="create.php" class="btn btn-success">Create</a>
         </div>
         <hr>
         <table class="table table-striped table-hover mb-5 table-bordered table-sm text-center">

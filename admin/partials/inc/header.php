@@ -59,11 +59,11 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="form.php" class="nav-link text-dark">
-                        <i class="bi bi-r-square-fill me-3 text-primary"></i>Form
+                    <a href="../users/index.php" class="nav-link text-dark">
+                        <i class="bi bi-r-square-fill me-3 text-primary"></i>Users
                     </a>
                 </li>
-                
+
                 <li class="nav-item">
                     <a href="../catagory/index.php" class="nav-link text-dark">
                         <i class="bi bi-box-seam-fill me-3 text-primary"></i>Catagory
@@ -160,6 +160,4 @@
                 </nav>
                 <!-- Navbar end -->
 
-                <div class="container border border-3">
-                    <h2 class="py-2 text-center bg-primary text-white">Product Information</h2>
-                    <hr>
+                

@@ -16,9 +16,11 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 ?>
 
 <?php include('../partials/inc/header.php'); ?>
+<div class="container border border-3">
+    <h2 class="py-2 text-center bg-primary text-white">Category Information</h2>
 <div>
-    <a href="index.php" class="btn btn-success ms-4 px-4 my-3">List</a>
-</div>
+    <a href="index.php" class="btn btn-success px-4">List</a>
+</div><hr>
 <div class="w-75 mx-auto">
     <form action="" method="post" class="shadow-lg p-5 rounded">
         <div class="mb-3">

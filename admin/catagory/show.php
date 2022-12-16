@@ -10,19 +10,20 @@ $result = $user->show($id);
 ?>
 
 <?php include('../partials/inc/header.php'); ?>
+<div class="container border-top">
+    <h2 class="py-2 text-center bg-primary text-white">Category Information</h2>
 <div class="row">
     <div>
-        <a href="index.php" class="btn btn-success my-3">List</a>
+        <a href="index.php" class="btn btn-success px-4">List</a>
     </div>
-    <div class="bg-light text-center border w-50 mx-auto mb-5">
-        <p class="border text-center bg-success text-white"><strong>Serial No :</strong>
-            <?=$result['id']?>
-        </p>
-        <p class="border text-center bg-success text-white"><strong>Catagory Name :</strong>
+    <div class="shadow-lg text-center w-50 mx-auto mb-5"><br>
+        <p class="text-center text-primary"><strong><u>Category Details </u></strong>
+        </p><hr>
+        <p class="text-center"><strong>Catagory Name :</strong>
             <?=$result['name']?>
-        </p>
-        <p class="border text-center bg-success text-white"><strong>Catagory Description :</strong>
+        </p><hr>
+        <p class="text-center"><strong>Catagory Description :</strong>
             <?=$result['description']?>
-        </p>
+        </p><hr>
     </div>
     <?php include('../partials/inc/footer.php'); ?>   

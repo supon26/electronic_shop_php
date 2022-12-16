@@ -53,11 +53,7 @@
                         <i class="bi bi-image me-3 text-primary"></i>Gallery
                     </a>
                 </li>
-                <li class="nav-item">
-                    <a href="./home/form.php" class="nav-link text-dark">
-                        <i class="bi bi-table me-3 text-primary"></i>Form
-                    </a>
-                </li>
+                
                 <li class="nav-item">
                     <a href="./home/table.php" class="nav-link text-dark">
                         <i class="bi bi-r-square-fill me-3 text-primary"></i>Table
@@ -66,6 +62,11 @@
                 <li class="nav-item">
                     <a href="./home/main-event.php" class="nav-link text-dark">
                         <i class="bi bi-calendar-event-fill me-3 text-primary"></i>Events
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="./users/index.php" class="nav-link text-dark">
+                        <i class="bi bi-person-badge-fill me-3 text-primary"></i>Users
                     </a>
                 </li>
                 <li class="nav-item">
