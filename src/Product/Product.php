@@ -13,6 +13,11 @@ class Product
         $db = new Db;
         $db->connect();
         $sqlData = $db->prepareSql("SELECT * FROM products ");
+        // $sqlData = $db->prepareSql("
+        //     SELECT products.name,products.category_name, products.description,products.price,products.photo,products.created_at,products.updated_at
+        //     FROM products
+        //     INNER JOIN categories ON products.category_name = products.name;
+        // ");
         $sqlData->execute();
         $result = $sqlData->fetchAll();
         return $result;

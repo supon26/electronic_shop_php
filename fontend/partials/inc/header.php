@@ -58,7 +58,6 @@
                             <li><a class="dropdown-item" href="#">Headphone</a></li>
                             <li><a class="dropdown-item" href="#">Watch</a></li>
                             <li><a class="dropdown-item" href="#">Personal Computer</a></li>
-                            <li><a class="dropdown-item" href="#">Television</a></li>
                         </ul>
                     </li>
                     <li class="nav-item">

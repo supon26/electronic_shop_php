@@ -20,8 +20,8 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
         <a href="index.php" class="btn btn-success px-4">List</a>
     </div>
     <hr>
-    <div class="row">
-        <form action="" method="POST" enctype="multipart/form-data">
+    <div class="row mb-5">
+        <form action="" method="POST" enctype="multipart/form-data" class="mb-5">
             <div class="col-md-6 mx-auto p-3 shadow-lg rounded">
                 <div class="form-group">
                     <label class="form-label" for="name"><b>Full Name :</b></label>

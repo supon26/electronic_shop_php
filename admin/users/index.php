@@ -32,7 +32,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     <div class="container border border-3">
         <h2 class="py-2 text-center bg-primary text-white">Users Information</h2>
-        <div class="col-12  table-responsive fixed">
+        <div class="col-12  table-responsive fixed mb-5">
             <div>
                 <a href="create.php" class="btn btn-success">Create</a>
             </div>

@@ -22,8 +22,8 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
         <a href="index.php" class="btn btn-success px-4">List</a>
     </div>
     <hr>
-    <div class="row py-3">
-        <form action="" method="post" enctype="multipart/form-data">
+    <div class="row py-3 mb-5">
+        <form action="" method="post" enctype="multipart/form-data" class="mb-5">
             <div class="col-md-6 mx-auto p-3 shadow-lg rounded">
                 <div class="form-group">
                     <input type="hidden" name="id" value="<?php echo $result['id']?>">
@@ -42,7 +42,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
                 </div>
                 <div class="form-group">
                     <label for="inputPassword5" class="form-label"><b>Password :</b></label>
-                    <input type="text" value="<?php echo $result['password']?>" id="inputPassword5" class="form-control"
+                    <input type="password" value="<?php echo $result['password']?>" id="inputPassword5" class="form-control"
                         aria-describedby="passwordHelpBlock" name="password">
                 </div>
                 <div class="mb-3">

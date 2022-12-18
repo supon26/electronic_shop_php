@@ -31,7 +31,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <?php } ?>
     <div class="container border-top">
     <h2 class="py-2 text-center bg-primary text-white">Product Information</h2>
-    <div class="col-12 table-responsive">
+    <div class="col-12 table-responsive mb-5">
         <div>
             <a href="create.php" class="btn btn-success">Create</a>
         </div>
