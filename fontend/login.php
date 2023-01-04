@@ -1,3 +1,17 @@
+<?php
+include_once('../vendor/autoload.php');
+use Supon\Users\Users;
+
+
+$users = new Users;
+
+if ($_SERVER['REQUEST_METHOD'] == "POST") {
+    $users->login($_POST);
+  }
+
+?>
+
+
 <?php include('./partials/inc/header.php')?>
 
 <div class="container" id="login">
@@ -6,14 +20,22 @@
             <h3 class="text-center">Welcome Back!</h3>
         </div>
         <div class="col-md-7 py-3 py-md-0" id="side2">
-            <h3 class="text-center">Account login</h3>
-            <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, sequi.</p>
-            <div class="input2 text-center">
-                <input type="name" placeholder="User Name">
-                <input type="password" placeholder="Password">
+            <h3 class="text-center">Account login</h3><br>
+            <div class="mx-auto p-3 shadow-lg rounded">
+                <form action="" method="post">
+                    <div class="form-group">
+                        <label class="form-label" for="email"><b>Email Address :</b></label>
+                        <input type="text" class="form-control" id="email" name="email">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="pass"><b>Password :</b></label>
+                        <input type="password" class="form-control" id="pass" name="password">
+                    </div>
+                    <div class="pt-2 d-flex justify-content-end">
+                        <button type="submit" class="btn btn-primary w-25">SUBMIT</button>
+                    </div>
+                </form>
             </div>
-            <p class="text-center" id="btnlogin"><a href="#">LOG IN</a></p>
-            <p class="text-center">Forgot Password<a href="#">Click</a></p>
         </div>
 
     </div>

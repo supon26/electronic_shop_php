@@ -23,11 +23,11 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
         <form action="" method="post" class="shadow-lg p-5 rounded">
             <div class="mb-3">
                 <label for="exampleFormControlInput1" class="form-label"><b>Catagory Name :</b></label>
-                <input type="text" name="name" class="shadow-none form-control" id="exampleFormControlInput1">
+                <input type="text" name="title" class="shadow-none form-control" id="exampleFormControlInput1">
             </div>
             <div class="mb-3">
                 <label for="exampleFormControlTextarea1" class="form-label"><b>Catagory Description :</b></label>
-                <input name="description" class="shadow-none form-control" id="exampleFormControlTextarea1"></input>
+                <input name="details" class="shadow-none form-control" id="exampleFormControlTextarea1"></input>
             </div>
             <div class="d-flex justify-content-end">
                 <button type="submit" class="btn btn-primary">SUBMIT</button>

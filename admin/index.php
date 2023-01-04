@@ -5,12 +5,15 @@ use Supon\Users\Users;
 
 // session_start();
 $users = new Users;
+$users->guard();
 $result = $users->index();
 
-foreach($result as $data);
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $users->destroy($_POST);
+}
+if (isset($_POST['logoutButtonName']) && $_SERVER["REQUEST_METHOD"] == "POST") {
+    $users->logout($_POST);
 }
 
 ?>
@@ -38,7 +41,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <div class="vertical-nav bg-white" id="sidebar">
             <div class="py-4 px-3 mb-4 bg-light">
                 <div class="media d-flex align-items-center">                   
-                    <img src="<?php echo '../public/assets/user-image/'.$data['photo'] ?>" width="80" height="80"
+                    <img src="../public/assets/image/admin/image/dashborad-profile.jpg" width="80" height="80"
                         alt="Profile" class="me-3 rounded-circle img-thumbnail shadow-sm">
                     <div class="media-body">
                         <h4 class="m-0">Supon</h4>
@@ -145,7 +148,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                     <li class="nav-item dropdown">
                                         <a class="nav-link" href="#" id="navbarDropdown" role="button"
                                             data-bs-toggle="dropdown" aria-expanded="false">
-                                            <img src="<?php echo '../public/assets/user-image/'.$data['photo'] ?>" width="70" height="70"
+                                            <img src="../public/assets/image/admin/image/dashborad-profile.jpg" width="70" height="70"
                                             alt="Profile" class="me-3 rounded-circle img-thumbnail shadow-sm">
                                         </a>
                                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -174,6 +177,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                             <i class="text-light bi bi-download"></i>
                                         </a>
                                     </li>
+                                    <form action="" method="POST">
+                                    <button type="submit" name="logoutButtonName">Log Out</button>
+                                    </form>
                                 </ul>
                             </div>
                         </div>

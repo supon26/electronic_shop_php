@@ -19,11 +19,11 @@ $result = $user->show($id);
     <div class="shadow-lg text-center w-50 mx-auto mb-5"><br>
         <p class="text-center text-primary"><strong><u>Category Details </u></strong>
         </p><hr>
-        <p class="text-center"><strong>Catagory Name :</strong>
-            <?=$result['name']?>
+        <p class="text-center"><strong> Name :</strong>
+            <?=$result['title']?>
         </p><hr>
-        <p class="text-center"><strong>Catagory Description :</strong>
-            <?=$result['description']?>
+        <p class="text-center"><strong>Details :</strong>
+            <?=$result['details']?>
         </p><hr>
     </div>
     <?php include('../partials/inc/footer.php'); ?>   

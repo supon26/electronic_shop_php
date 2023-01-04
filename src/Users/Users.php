@@ -136,6 +136,74 @@ class Users
 
         header("Location: index.php");
     }
+
+
+
+
+    public function login($data)
+    {
+        session_start();
+        $email = $data['email'];
+        $password = $data['password'];
+
+        $data = [
+            $email,
+            $password
+        ];
+        $db = new Db;
+        $db->connect();
+        $sqlData = $db->prepareSql("SELECT * FROM  users Where email LIKE ? AND password LIKE ?");
+        $sqlData->execute($data);
+        $result = $sqlData->fetch();
+        // $result['total_user'];
+        // print_r($result['total_user']);
+        // print_r($result);
+        // die();
+        if (!empty($result)) {
+
+            $_SESSION['isValidUser'] = true;
+            $authUser = [
+                'name' => $result['name'],
+                'phone' => $result['phone'],
+                'email' => $result['email'],
+                'photo' => $result['photo'],
+                'id' => $result['id']
+
+            ];
+           
+            $_SESSION['authUser'] = $authUser;
+
+       
+             header('Location:../fontend/index.php');
+            //  header('Location:../fontend/product-details.php');
+            // header('Location: ' . $_SERVER['HTTP_REFERER']);
+            //  header('Location:../fontend/product-details.php');
+        } else {
+            $_SESSION['isValidUser'] = false;
+            header('Location:register.php');
+        }
+    }
+
+    public function guard()
+    {
+           session_start();
+        if ($_SESSION['isValidUser']) {
+            // header('Location:../admin/index.php');
+        } else {
+            $_SESSION['isValidUser'] = false;
+            header('Location:../fontend/login.php');
+        }
+    }
+
+    public function logout()
+    {
+        if (isset($_POST['logoutButtonName'])) {
+            session_destroy();
+            unset($_SESSION['isValidUser']);
+            header('Location:../fontend/login.php');
+        }
+    }
+
     
     public function destroy($data)
     {

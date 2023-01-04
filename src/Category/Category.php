@@ -19,17 +19,17 @@ class Category
 
     public function store($data)
     {
-        $name           = $data['name'];
-        $description    = $data['description'];
+        $title           = $data['title'];
+        $details         = $data['details'];
 
         $data=[
-            'name'          =>$name,
-            'description'   =>$description,
+            'title'          =>$title,
+            'details'        =>$details,
         ];
         $db = new Db;
         $db->connect();
-        $sql = "INSERT INTO categories (name, description)
-        VALUES (:name, :description)";
+        $sql = "INSERT INTO categories (title, details)
+        VALUES (:title, :details)";
         $stmt = $db->prepareSql($sql);
         $stmt->execute($data);
         // Update Query lagbe
@@ -64,20 +64,20 @@ class Category
 
     public function update($data)
     {
-        $id   = $data['id'];
-        $name           = $data['cat_name'];
-        $description    = $data['description'];
+        $id             = $data['id'];
+        $title          = $data['title'];
+        $details        = $data['details'];
 
         $data=[
             'id'            =>$id,
-            'name'          =>$name,
-            'description'   =>$description,
+            'title'         =>$title,
+            'details'       =>$details,
         ];
     
         $db = new Db;
         $db->connect();
 
-        $sql = "UPDATE categories SET id=:id, name=:name,description=:description WHERE id='$id'";
+        $sql = "UPDATE categories SET id=:id, title=:title,details=:details WHERE id='$id'";
         $stmt = $db->prepareSql($sql);
         $stmt->execute($data);
         // Update Query lagbe

@@ -4,10 +4,25 @@ include_once('../vendor/autoload.php');
 
 use Supon\Product\Product;
 use Supon\Category\Category;
+use Supon\Orders\Orders;
+use Supon\Users\Users;
+
+$user = new Users;
+$user->guard();
 
 $user = new Product;
-$id = $_GET['id'];
+if (isset($_GET['id'])) {
+    $id = $_GET['id'];
+} else {
+    $id = $_SESSION['product_id'];
+}
+
 $result = $user->show($id);
+$userId = $_SESSION['authUser']['id'];
+$product = new Orders;
+if ($_SERVER['REQUEST_METHOD'] == "POST") {
+    $product->create($_POST);
+  }
 
 ?>
 
@@ -30,6 +45,10 @@ $result = $user->show($id);
                 </h1>
                 <hr class="me-5">
                 <p class="me-5">
+                    <?php echo $result['title']?>
+                </p>
+                <hr class="me-5">
+                <p class="me-5">
                     <?php echo $result['description']?>
                 </p>
                 <hr class="me-5">
@@ -38,10 +57,23 @@ $result = $user->show($id);
                 </p>
                 <hr class="me-5">
             </div>
-            <div class="d-flex justify-content-end align-items-center me-3 mb-5 ">
-                <a href="view-card.php?id=<?php echo $result['id']?>" class="btn btn-outline-success shadow-none">Add to Card</a>
-                <a href="confirm-oder.php" class="btn btn-primary shadow-none">Buy Now</a>
-            </div>
+            <form action="" method="post">
+                <input type="hidden" name="p_id" id="" value="<?php echo $id?>">
+                <input type="hidden" name="user_id" id="" value="<?php echo $userId ?>">
+                
+                <input type="hidden" name="photo" id="" value="<?php echo $result['photo']?>">
+                <input type="hidden" name="name" id="" value="<?php echo $result['name']?>">
+                <input type="hidden" name="category_id" id="" value="<?php echo $result['category_id']?>">
+                <input type="hidden" name="description" id="" value="<?php echo $result['description']?>">
+                <input type="hidden" name="price" id="" value="<?php echo $result['price']?>">
+                <input type="hidden" name="subtotal">
+                <label class="ms-5" for="qty"> Quantity :
+                    <input type="number" id="qty" class="text-center"  style="width: 70px;" name="quantity" value="">
+                </label>
+                <div class="d-flex justify-content-end align-items-center me-3 mb-5 ">
+                    <button class="btn btn-primary" type="submit">Add to Card</button>
+                </div>
+            </form>
         </div>
 
     </div>

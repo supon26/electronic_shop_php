@@ -40,11 +40,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <table class="table table-striped table-hover mb-5 table-bordered table-sm text-center">
             <thead class="table-dark">
                 <tr>
-                    <th>id</th>
+                    <th>S.No</th>
                     <th>Name</th>
-                    <th>Description</th>
-                    <th>created_at</th>
-                    <th>updated_at</th>
+                    <th>Details</th>
+                    <th>Created_at</th>
+                    <th>Updated_at</th>
                     <th colspan="3">Action</th>
                 </tr>
             </thead>
@@ -57,10 +57,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     <?php echo ++$i?>
                 </td>
                 <td>
-                    <?php echo $data['name']?>
+                    <?php echo $data['title']?>
                 </td>
                 <td>
-                    <?php echo $data['description']?>
+                    <?php echo $data['details']?>
                 </td>
                 <td>
                     <?php echo $data['created_at']?>

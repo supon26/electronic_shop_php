@@ -8,6 +8,10 @@ session_start();
 $users = new Product;
 $result = $users->index();
 
+// echo "<pre>";
+//         print_r($result);
+//         die(); 
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $users->destroy($_POST);
 }
@@ -35,18 +39,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <div>
             <a href="create.php" class="btn btn-success">Create</a>
         </div>
-        <hr>
+        <hr class="my-0">
         <table class="table table-striped mb-5 table-hover table-bordered table-sm text-center">
             <thead class="table-dark">
                 <tr>
-                    <th>id</th>
-                    <th>Product Name</th>
-                    <th>Category Name</th>
-                    <th>Product Details</th>
-                    <th>Product Price</th>
-                    <th>Photo</th>
-                    <th>created_at</th>
-                    <th>updated_at</th>
+                    <th>S No.</th>
+                    <th>Name</th>
+                    <th>Category</th>
+                    <th>Description</th>
+                    <th>Price</th>
+                    <th>Image</th>
                     <th colspan="3">Action</th>
                 </tr>
             </thead>
@@ -57,7 +59,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
              <?php
             //  echo "<pre>";
-            //  print_r($data['photo']);
+            //  print_r($data);
             //  die();
              ?>
             <tr>
@@ -68,32 +70,26 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     <?php echo $data['name']?>
                 </td>
                 <td>
-                    <?php echo $data['category_name']?>
+                    <?php echo $data['title']?>
                 </td>
                 <td>
                     <?php echo $data['description']?>
                 </td>
                 <td>
                     <?php echo $data['price']?>
-                </td>
+                </td>   
                 <td>
                     <img src="<?php echo '../../public/assets/upload/'.$data['photo'] ?>" width="70" height="60" alt=''>
                 </td>
                 <td>
-                    <?php echo $data['created_at']?>
+                    <a href="show.php?id=<?php echo $data['p_id']?>" class="btn btn-primary">Show</a>
                 </td>
                 <td>
-                    <?php echo $data['updated_at']?>
-                </td>
-                <td>
-                    <a href="show.php?id=<?php echo $data['id']?>" class="btn btn-primary">Show</a>
-                </td>
-                <td>
-                    <a href="edit.php?id=<?php echo $data['id']?>" class="btn btn-warning">Edit</a>
+                    <a href="edit.php?id=<?php echo $data['p_id']?>" class="btn btn-warning">Edit</a>
                 </td>
                 <td>
                     <form action="" method="post" class="inset-block">
-                        <input type="hidden" name="id" value="<?php echo $data['id'] ?>">
+                        <input type="hidden" name="id" value="<?php echo $data['p_id'] ?>">
                         <button onclick="return confirm('Are you Sure');" class="btn btn-danger">Delete</button>
                     </form>
                 </td>

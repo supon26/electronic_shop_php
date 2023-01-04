@@ -40,10 +40,11 @@ $results = $users->index();
         <?php
         $i = 0;
         foreach($results as $data){ ?>
+        <?php $_SESSION['product_id'] = $data['p_id']?>
         <?php
         ?>
         <div class="col-md-3 py-3 py-md-0" <?php echo ++$i;?>>
-            <a class="text-decoration-none" href="product-details.php?id=<?php echo $data['id']?>">
+            <a class="text-decoration-none" href="product-details.php?id=<?php echo $data['p_id']?>">
                 <div class="card shadow-lg">
                     <img src="<?php echo '../public/assets/upload/'.$data['photo'] ?>" width="" height="" alt="">
                     <div class="card-body">

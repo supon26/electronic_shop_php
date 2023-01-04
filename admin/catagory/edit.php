@@ -25,13 +25,13 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
     <form action="" method="post" class="shadow-lg p-5 rounded">
         <div class="mb-3">
             <input type="hidden" name="id" value="<?php echo $result['id']?>">
-            <label for="exampleFormControlInput1" class="form-label"><b>Catagory Name :</b></label>
-            <input type="text" name="cat_name" value="<?php echo $result['name']?>" class="shadow-none form-control"
+            <label for="exampleFormControlInput1" class="form-label"><b> Name :</b></label>
+            <input type="text" name="title" value="<?php echo $result['title']?>" class="shadow-none form-control"
                 value="Smart Phone" id="exampleFormControlInput1">
         </div>
         <div class="mb-3">
-            <label for="exampleFormControlTextarea1" class="form-label"><b>Catagory Description :</b></label>
-            <input type="text" name="description" value="<?php echo $result['description']?>"
+            <label for="exampleFormControlTextarea1" class="form-label"><b> Details :</b></label>
+            <input type="text" name="description" value="<?php echo $result['details']?>"
                 class="shadow-none form-control" value="Smart Description" id="exampleFormControlInput1">
         </div>
         <div class="d-flex justify-content-end">
